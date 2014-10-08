@@ -1,0 +1,10 @@
+2012-2014 Brubeck Computer Algebra System
+
+In[1]:= d/dx x^2
+
+Out[1]:= 2x
+
+In[2]:= ∫(x^3+2x+1)dx
+
+Out[2]:= x+x^2+(1/4)x^4+C
+
