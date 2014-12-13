@@ -1,7 +1,7 @@
 package algebra;
 
 import static algebra.Algebra.*;
-import algebra.Field.*;
+import algebra.Space.*;
 
 public class Rectangular extends Algebra<Complex> implements Complex{
     Algebra<Real> re, im;

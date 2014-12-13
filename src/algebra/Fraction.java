@@ -1,6 +1,6 @@
 package algebra;
 
-import algebra.Field.*;
+import algebra.Space.*;
 
 public class Fraction extends Algebra<Real> implements Real{
     public double num, den;
@@ -86,6 +86,10 @@ public class Fraction extends Algebra<Real> implements Real{
     @Override
     public Fraction negate(){
         return new Fraction(-num, den);
+    }
+    @Override
+    public Fraction conj(){
+        return this;
     }
     @Override
     public Fraction simplify(){

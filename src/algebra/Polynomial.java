@@ -1,6 +1,6 @@
 package algebra;
 
-import algebra.Field.*;
+import algebra.Space.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -81,6 +81,10 @@ public class Polynomial<K extends Complex> extends Algebra<K>{
     }
     @Override
     public Algebra<K> negate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    @Override
+    public Algebra<K> conj() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     @Override

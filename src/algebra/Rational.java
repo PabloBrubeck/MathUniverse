@@ -2,7 +2,7 @@ package algebra;
 
 import java.util.*;
 
-public class Rational<K extends Field> extends Algebra<K> {
+public class Rational<K extends Space> extends Algebra<K> {
     private final Algebra<? extends K> num, den;
     
     public Rational(Algebra<? extends K> n, Algebra<? extends K> d){
@@ -49,6 +49,10 @@ public class Rational<K extends Field> extends Algebra<K> {
     @Override
     public Algebra<K> negate() {
         return new Rational<>(num.negate(), den);
+    }
+    @Override
+    public Algebra<K> conj(){
+        return new Rational(num.conj(), den.conj());
     }
     @Override
     public Algebra<K> simplify() {

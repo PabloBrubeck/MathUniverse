@@ -3,7 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/advancedMath/Fourier.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Expression.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Rectangular.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/mathematics/Calculus.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/graphs/Grapher.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/algebra/Polynomial.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Product.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Exponential.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Fraction.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Scalar.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Sum.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Quotient.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/expression/Tensor.java</file>
+            <file>file:/C:/Users/Pablo/Documents/NetBeansProjects/Mathematics/src/algebra/Space.java</file>
         </group>
     </open-files>
 </project-private>

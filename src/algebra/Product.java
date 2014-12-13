@@ -1,10 +1,10 @@
 package algebra;
 
 import java.util.*;
-import algebra.Field.*;
+import algebra.Space.*;
 import static algebra.Algebra.*;
 
-public class Product<K extends Field> extends Algebra<K>{
+public class Product<K extends Space> extends Algebra<K>{
     private final List<Algebra<? extends K>> factors;
     
     public Product(Algebra<? extends K>... t){
@@ -77,6 +77,14 @@ public class Product<K extends Field> extends Algebra<K>{
         Algebra<? extends K> first=p.factors.get(0);
         p.factors.set(0, first.negate());
         return p;
+    }
+    @Override
+    public Algebra<K> conj() {
+        List<Algebra<? extends K>> p=new ArrayList();
+        for(Algebra<? extends K> e: factors){
+            p.add(e.conj());
+        }
+        return new Product<>(p);
     }
     @Override
     public Algebra<? extends K> simplify(){

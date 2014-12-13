@@ -3,7 +3,7 @@ package algebra;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sum<K extends Field> extends Algebra<K>{
+public class Sum<K extends Space> extends Algebra<K>{
     private final List<Algebra<? extends K>> terms;
     
     public Sum(Algebra<? extends K>... t){
@@ -77,6 +77,10 @@ public class Sum<K extends Field> extends Algebra<K>{
     @Override
     public Algebra<K> negate(){
         return distribute(t -> t.negate());
+    }
+    @Override
+    public Algebra<K> conj() {
+        return distribute(t -> t.conj());
     }
     @Override
     public Algebra<K> simplify(){

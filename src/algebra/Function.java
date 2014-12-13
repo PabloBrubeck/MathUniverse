@@ -1,8 +1,8 @@
 package algebra;
 
-import algebra.Field.*;
+import algebra.Space.*;
 
-public class Function<K extends Field> extends Algebra<K>{
+public class Function<K extends Space> extends Algebra<K>{
     private final Algebra<? extends Complex> coef;
     private final Algebra<? extends K> arg;
     private final String name;
@@ -117,6 +117,10 @@ public class Function<K extends Field> extends Algebra<K>{
     @Override
     public Function<K> negate(){
         return new Function(getCoef().negate(), name, arg);
+    }
+    @Override
+    public Function<K> conj() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     @Override
     public Function<K> simplify(){

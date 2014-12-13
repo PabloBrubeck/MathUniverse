@@ -1,10 +1,42 @@
 2012-2014 Brubeck Computer Algebra System
 
-In[1]:= d/dx x^2
+In[1]:= x+5x
 
-Out[1]:= 2x
+Out[1]:= 6x
 
-In[2]:= ∫(x^3+2x+1)dx
+In[2]:= sqrt[2]*sqrt[3]
 
-Out[2]:= x+x^2+(1/4)x^4+C
+Out[2]:= 2.4494897427831783
+
+In[3]:= sqrt[2]+sqrt[2]
+
+Out[3]:= 2.8284271247461903
+
+In[4]:= Expand (x^2+3x-1)(x^3+x+1)
+
+Out[4]:= -1+2x+4x^2+3x^4+x^5
+
+In[5]:= d/dx sin[x]cos[x^2]
+
+Out[5]:= -2(sin[x])(sin[x^2])(x)+(cos[x])(cos[x^2])
+
+In[6]:= Factor -1+2x+4x^2+3x^4+x^5
+
+Out[6]:= -1+2x+4x^2+3x^4+x^5
+
+In[7]:= Expand (x-1)(x^3+x+1)(x-2)
+
+Out[7]:= 2-x-2x^2+3x^3-3x^4+x^5
+
+In[8]:= Factor 2-x-2x^2+3x^3-3x^4+x^5
+
+Out[8]:= (-1+x)(-2+x)(1+x+x^3)
+
+In[9]:= ∫(sin[x])dx
+
+Out[9]:= -cos[x]+C
+
+In[10]:= ∫(sin[x])dx from 1 to 9
+
+Out[10]:= 1.4514325677528168
 

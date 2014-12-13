@@ -1,8 +1,8 @@
 package algebra;
 
-import algebra.Field.*;
+import algebra.Space.*;
 
-public class Exponential<K extends Field> extends Algebra<K>{
+public class Exponential<K extends Space> extends Algebra<K>{
     private final Algebra<? extends Complex> coef;
     private final Algebra<? extends K> base;
     private final Algebra<? extends K> exp;
@@ -85,6 +85,11 @@ public class Exponential<K extends Field> extends Algebra<K>{
     }
     @Override
     public Algebra<? extends K> integrate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Algebra<K> conj() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

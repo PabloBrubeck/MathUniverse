@@ -1,18 +1,19 @@
 package algebra;
 
-import algebra.Field.Complex;
-import algebra.Field.Real;
+import algebra.Space.Complex;
+import algebra.Space.Real;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class Algebra<K extends Field>{
+public abstract class Algebra<K extends Space>{
     
     //Abstract methods
     public abstract double evaluate(double x);
     public abstract Algebra<K> evaluate(Algebra<? extends K> u);
     public abstract Algebra<K> negate();
+    public abstract Algebra<K> conj();
     public abstract Algebra<? extends K> simplify();
     public abstract Algebra<? extends K> expand();
     public abstract Algebra<? extends K> factor();
@@ -93,7 +94,7 @@ public abstract class Algebra<K extends Field>{
     public static Rectangular add(Rectangular z, Rectangular w){
         return new Rectangular(add(z.re, w.re), add(z.im, w.im));
     }
-    public static <T extends Field> Algebra<T> add(Algebra<? extends T> u, Algebra<? extends T> v){
+    public static <T extends Space> Algebra<T> add(Algebra<? extends T> u, Algebra<? extends T> v){
         if(u instanceof Fraction && v instanceof Fraction){
             return (Algebra<T>)add((Fraction)u, (Fraction)v);
         }else if(u instanceof Complex && v instanceof Complex){
@@ -108,7 +109,7 @@ public abstract class Algebra<K extends Field>{
     public static Rectangular subtract(Rectangular z, Rectangular w){
         return new Rectangular(subtract(z.re, w.re), subtract(z.im, w.im));
     }
-    public static <T extends Field> Algebra<T> subtract(Algebra<? extends T> u, Algebra<? extends T> v){
+    public static <T extends Space> Algebra<T> subtract(Algebra<? extends T> u, Algebra<? extends T> v){
         if(u instanceof Fraction && v instanceof Fraction){
             return (Algebra<T>)subtract((Fraction)u, (Fraction)v);
         }else if(u instanceof Complex && v instanceof Complex){
@@ -126,7 +127,7 @@ public abstract class Algebra<K extends Field>{
     public static Rectangular multiply(Rectangular z, Algebra<Real> x){
         return new Rectangular(multiply(z.re, x), multiply(z.im, x));
     }
-    public static <T extends Field> Algebra<T> multiply(Algebra<? extends T> u, Algebra<? extends T> v){
+    public static <T extends Space> Algebra<T> multiply(Algebra<? extends T> u, Algebra<? extends T> v){
         if(u.equals(0) || v.equals(0)){
             return (Algebra<T>)new Fraction(0);
         }if(u.equals(1)){
@@ -150,7 +151,7 @@ public abstract class Algebra<K extends Field>{
     public static Rectangular divide(Rectangular z, Algebra<Real> x){
         return new Rectangular(divide(z.re,x), divide(z.im,x));
     }
-    public static <T extends Field> Algebra<T> divide(Algebra<? extends T> u, Algebra<? extends T> v){
+    public static <T extends Space> Algebra<T> divide(Algebra<? extends T> u, Algebra<? extends T> v){
         if(u instanceof Fraction && v instanceof Fraction){
             return (Algebra<T>)multiply((Fraction)u, (Fraction)v);
         }else if(u instanceof Complex && v instanceof Complex){
