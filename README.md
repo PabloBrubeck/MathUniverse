@@ -1,4 +1,7 @@
-MathUniverse
+Computer Algebra System
 ============
 
-Computational math everywhere.
+* Algebraic manipulation
+* Differentiation
+* Integration (substituion and by parts)
+* Function plotting (cartesian, polar, and parametric)
